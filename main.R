@@ -26,4 +26,9 @@ mpg %>%
     geom = "errorbar", fun.data = mean_cl_normal,
     width = .05, position = position_nudge(x = .2, y = 0)
   ) +
-  dark_mode() 
+  stat_summary(
+    geom = "point", fun = mean, 
+    shape = 21, fill = "white",
+    position = position_nudge(x = .2, y = 0)
+  ) +
+  dark_mode()
